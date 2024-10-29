@@ -1,0 +1,133 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+h1 {
+	font-size: 5em;
+	margain: auto;
+	font-family: "Bahiana", sans-serif;
+	text-align: center;
+	color: #212429;
+}
+
+h2 {
+	margain: auto;
+	font-family: "Bahiana", sans-serif;
+	text-align: center;
+	font-size: 3em;
+	color: #cfd6e3;
+}
+
+p{
+	font-family: "Jolly Lodger", system-ui;
+	font-size: 1.5em;
+	color: #cfd6e3;
+	letter-spacing: .2em;
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#container {
+	padding: 2%;
+}
+
+body{
+	background: #4A547F;
+	padding: 2%;
+	margin: auto;
+}
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (max-width: 769px) {
+	
+#text{
+	padding: 2%;
+	width: 90%;
+	background: #212429;
+	line-height: .2em;
+	
+}
+#response{
+	width: 90%;
+	padding: 2%;
+	background: #212429;
+	line-height: 2em;
+}	
+	
+} /* closes 769px+ */
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 770px) {
+
+
+#text{
+	padding: 2%;
+	width: 90%;
+	background: #212429;
+	line-height: .2em;
+	
+}
+#response{
+	width: 90%;
+	padding: 2%;
+	background: #212429;
+	line-height: 2em;
+}
+	
+	
+} /* closes 1024px+ */
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+
+
+#text{
+	float: left;
+	padding: 2%;
+	width: 45%;
+	background: #212429;
+	line-height: .2em;
+	
+}
+#response{
+	width: 45%;
+	float: right;
+	padding: 2%;
+	background: #212429;
+	line-height: 2em;
+}
+	
+	
+} /* closes 1024px+ */
+
