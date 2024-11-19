@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>***</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div id="container">
+
+<header>
+<h1>My Chemical Romance</h1>
+<h2>The End.</h2>
+</header>
+
+<main>
+
+<p>Now, come one, come all to this tragic affair</p>
+<p>Wipe off that makeup, what's in is despair</p>
+<p>So throw on the black dress, mix in with the lot</p>
+<p>You might wake up and notice you're someone you're not</p>
+<p>If you look in the mirror and don't like what you see</p>
+<p>You can find out firsthand what it's like to be me</p>
+<p>So gather 'round, piggies, and kiss this goodbye</p>
+<p>I'd encourage your smiles, I'll expect you won't cry!</p>
+
+<p> -The End. By My Chemical Romance</p>
+<button id=button> more</button>
+<p id=special>The reason I chose to make this is because My Chemical Romance, after so, so, so many years, are finally doing a stadium tour of their album Welcome to The Black Parade. They are coming to Chicago and while I wasn't able to get tickets (by the time I got to the checkout page the only tickets available were 300+) I still hold out hope I will get them before August comes. Devo are also the openers, I saw them last year, and they were spectacular and I cannot wait to see them again. While the song is called "The End.", this is the first song in the album. The lyrics are also the opening lyrics, and I think they set the tone for the rest of the album pretty well.</p>
+
+<button id=button2> more</button>
+<figure id=mcr>
+	<img scr="img/mcr.jpg" alt= "Screencap from the Long Live The Black Parade Tour Announcement">
+	<figcaption>Screencap from the Long Live The Black Parade Tour Announcement</figcaption>
+</figure>
+
+<button id=button3> more</button>
+<figure id=mcr2>
+	<img scr="img/mcr2.jpg" alt= "Screencap from I Don't Love You music video">
+	<figcaption>Screencap from I Don't Love You music video</figcaption>
+</figure>
+
+
+</main>
+
+
+
+  </div><!-- close "container" -->
+  
+  
+  <!-- Paste the jQuery starter code below here -->
+    <!-- Link to jQuery on Google CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+
+<script>
+  $(document).ready(function() {
+  $('p#special').hide();
+  $('button#button').click(function() {
+  
+	$('p#special').show();
+
+  }); //close text function
+
+  $('#mcr').hide();
+  $('button#button2').click(function() {
+  
+	$('#mcr').show();
+
+  }); //close mcr function
+
+  $('#mcr2').hide();
+  $('button#button3').click(function() {
+  
+	$('#mcr2').show();
+
+  }); //close mcr2 function
+
+
+  }); //close .ready()
+</script>
+  
+  
+
+</body>
+	
+</html> 
