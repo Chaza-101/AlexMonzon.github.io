@@ -1,0 +1,49 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	font-family: "Averia Sans Libre", sans-serif;
+	padding: 10px;
+	background:#171717;
+	color: #fff0f0;
+}
+
+#container {
+	width: 800px;
+	margin: auto;
+
+}
+
+p{
+	margin: auto;
+	padding-left: 30px;
+	width 500px;
+}
+
+#special {
+	font-family: "Averia Gruesa Libre", system-ui;
+	color: #9e0000;
+}
+
+
+h1{
+	color:#9e0000;
+	cursor: pointer;
+}
+
+h2{
+	color:#9e0000;
+}
