@@ -1,0 +1,301 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+nav ul{
+	list-style: none;
+	padding-left: 0px;
+}
+
+#titles{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+#cont{
+	display: flex;
+	flex-direction:column;
+}
+
+#nav1, #nav2, #head1, #head2{
+	min-width: 100px;
+	max-width: 300px;
+	border-radius: 2vw;
+	margin:0px 2px;
+}
+#assingments{
+	display:flex;
+	min-width: 50px;
+	max-width: 350px;
+	justify-content: center;
+	flex-direction: row;
+	margin-top: -15px;
+}
+
+#final{
+	margin-top: -25px;
+	margin-left: 10px;
+	margin-right: 2px;
+}
+
+#final li{
+	display: inline-grid;
+	font-family: "Special Elite", serif;
+}
+
+a{
+	text-decoration: none;
+	color: #DAD8EA;
+}
+
+header{
+	font-family: "Walter Turncoat", serif;
+	color: #DAD8EA;
+	text-align: center;
+	margin-top: 30px;
+}
+
+
+
+figure{
+	margin: 0px;
+}
+
+img{
+	width: 100%;
+}
+
+body {
+background: #06032A;
+}
+
+
+main{
+	margin: 2% 10%;
+}
+
+
+#text{
+	font-family: "Special Elite", serif;
+	color: #DAD8EA;
+}
+
+footer{
+	color: #DAD8EA;
+	font-family: "Special Elite", serif;
+	font-size: 12px;
+	margin-top: 90px;
+}
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+figcaption{
+	color: #AAA3E5;
+	text-align: center;
+	font-size: 12px;
+	font-family: "Special Elite", serif;
+}
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for portrait tablets and large phone screens.  */
+@media all and (min-width: 600px) {
+	
+	
+#layout{
+	display: flex;
+	margin: auto;
+}
+#nav1, #nav2, #head1, #head2{
+
+	margin:0px 2%;
+}
+nav{
+	margin: 0px 4px;
+}
+#cont{
+	display: flex;
+	flex-direction: column;
+
+}
+#assingments{
+	display: flex
+	justify-content: space-around;
+	min-width:400px;
+	margin-top: 0px;
+}
+
+#final{
+	display: flex;
+	flex-direction: column;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+#final1{
+	margin-bottom: 4px;
+}
+#final li{
+	margin: 0px 10px;
+}
+
+#titles{
+	display: flex;
+	flex-direction: row;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#text{
+	max-height: 300px;
+	word-spacing: 6px;
+}
+#photo{
+	min-width:300px;
+	max-width: 300px;
+	margin: auto;
+}
+
+
+} /* closes 600px+ */
+
+
+
+/* Minimum width for landscape laptops. */
+@media all and (min-width: 768px) {
+
+#cont{
+	display: flex;
+	flex-direction: row;
+	margin: 0px;
+}
+#final{
+	display: flex;
+	flex-direction: column;
+	margin-left: 0px;
+	margin-top: 0px;
+
+}
+#final1{
+	margin-bottom: 30px;
+}
+
+
+#text{
+	max-height: 300px;
+	word-spacing: 6px;
+	margin-left: 2%;
+}
+
+} /* closes 768px+ */
+
+
+
+/* Minimum width for larger tablets, laptops and desktops. */
+@media all and (min-width: 992px) {
+nav{
+	margin: 0px 10%;
+}
+#final li a{	
+	margin-bottom: 10px;
+}
+main{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#text{
+	max-height: 300px;
+	word-spacing: 6px;
+	margin-left: 2%;
+}
+#photo{
+	min-width:300px;
+	max-width: 300px;
+}
+
+
+} /* closes 992px+ */
+
+
+/* Minimum width for larger desktops. */
+@media all and (min-width: 1200px) {
+nav{
+	margin: 0px 10%;
+}
+
+
+#text{
+	max-height: 300px;
+	word-spacing: 6px;
+	margin-left: 2%;
+}
+#photo{
+	min-width:300px;
+	max-width: 300px;
+}
+
+#container{
+	max-width: 1200px;
+	margin: auto;
+}
+
+footer{
+	margin-top: 0px;
+}
+
+} /* closes 1200px+ */
+
+
+
+

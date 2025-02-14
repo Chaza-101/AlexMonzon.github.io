@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Homepageeeee</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Walter+Turncoat&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+
+  <div id="container">
+  
+ <header>
+  <h1> Alex M. </h1>
+  <h2>Class Portfolio, Spring 2025</h2>
+</header>
+
+<nav>
+<div id="layout">
+<div id="titles">
+    <li><figure id="head1"><a href="index.html"><img id="head1" src="img/home.png" alt="homepage"><figure></a></li>
+    <li><figure id="head2"><a href="bio.html"><img id="head2" src="img/bio.png" alt="bio"></figure></a></li>
+</div> <!-- close titles -->
+<div id="titles">
+    <li><figure id="nav1"><img id="nav1" src="img/homework.png" alt="homework"></figure></li>
+    <li><figure id="nav2"><img id="nav2" src="img/final.png" alt="final"></figure></li>
+</div> <!-- close titlea -->
+    </div> <!-- close layout -->
+<div id="cont">
+    <ul>
+        <div id="assingments">
+        <li><a href="assignment1/index.html"><img src="img/a1.png" alt="Assingment 1"></a></li>
+        <li><a href=""><img src="img/a3.png" alt="Assingment 3"></a></li>
+        <li><a href=""><img src="img/a4.png" alt="Assingment 4"></a></li>
+        <li><a href=""><img src="img/a5.png" alt="Assingment 5"></a></li>
+        <li><a href=""><img src="img/a6.png" alt="Assingment 6"></a></li>
+        </div> <!-- close assingments -->
+    </ul> 
+    <ul>
+        <div id="final">
+
+        <div id="final1">
+        <li><a href="">Proposal</a></li>
+        <li><a href="">Research Artifacts</a></li>
+        <li><a href="">Creative Exploration</a></li>
+        </div> <!-- close final1 -->
+        <div id="final2">
+        <li><a href="">Wireframes</a></li>
+        <li><a href="">Style Guide</a></li>
+        <li><a href="">Hi-res Prototypes</a></li>
+        <li><a href="">Completion</a></li>
+        </div> <!-- close final2 -->
+
+        </div> <!-- close final-->
+</nav>
+
+<main>
+<div id="photo">
+<figure><img src="img/snom.png" alt"3dm modled snom"></figure> 
+</div><!-- close photo -->
+
+<div id="text">
+<p> Hello World :D </p>
+<p> This is a place to keep everything from this class in order!</p>
+<p>I'm the most proud of the nav bar, but I wasn't able to make the starting position for the dropdown menus to be hidden, the jquery did not want to work with me so it looks a little janky.</p>
+<p>But if everything goes well I will find a way to make it work eventually, or at least for the final project. </p>
+<p> Enjoy :D </p>
+</div><!-- close text -->
+</main>
+
+<footer>
+Alex Monzon 2025 &#169;	
+</footer>
+  </div><!-- close "container" -->
+  
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+
+$(document).ready(function(){
+
+  $("#nav1").click(function(){
+    $("#assingments").toggle();
+  });
+  $("#nav2").click(function(){
+    $("#final").toggle();
+});
+
+});; //close .ready()
+</script>
+
+
+</body>
+	
+</html> 
