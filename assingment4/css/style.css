@@ -1,0 +1,406 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+	animation: main 1s;
+	animation-delay: 10s;
+	animation-fill-mode: forwards;
+}
+/* base boring stuff starts*/
+img{
+	width: 50%;
+
+}
+header{
+	background: grey;
+	text-align: center;
+	padding: 1%;
+
+	animation: background 4s;
+	animation-delay: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+main{
+	margin: 20px 20vw;
+	
+}
+
+
+figure{
+	text-align: center;
+
+	animation: photo 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+footer{
+	background: grey;
+	padding: 2% 2%;
+	animation: background 4s;
+	animation-delay: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+footer p{
+	margin: 0px 40px;
+}
+footer p, figcaption p{
+	font-size: 16px;
+}
+p, h1, h2{
+	font-family: calibri;
+}
+
+main div p{
+	font-size: 24px;
+
+	animation: text 2s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+}
+
+h1,h2{
+	font-size: 150%;
+	
+	animation: headr 2s;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+h1{
+	font-size: 30px;
+}
+	
+#container {
+}
+
+/*funky keyframe and stuff start */
+
+	@keyframes background {
+	 0% {background: #BCF8EC;}
+	 25% {background: #AED9E0;}
+	 50% {background: #9FA0C3;}
+	 75% {background: #8B687F;}
+     100% {background: #7B435B;}
+     }
+
+	@keyframes photo {
+	 0% {}
+	 100% { 
+	 transform: translate(-600px, -2000px) rotate(3000deg);
+	 }
+     }
+
+	@keyframes headr {
+	 0% {font-family: "Moo Lah Lah", sans-serif;
+	 transform: scale(2);
+	 color: #3E1627;
+	 }
+	 100% { 
+	 transform: rotateY(360deg) rotatex(360deg);
+	 font-family: "Moo Lah Lah", sans-serif;
+	 color: #3E1627;
+	 }
+     }
+
+	@keyframes text {
+	 0% {}
+	 100% { 
+	 transform: translate(600px, 2000px) rotate(3000deg);
+	 }
+     }
+
+	@keyframes main {
+	 0% { 
+	  background: url("../img/background.png");
+	  background-position: center; 
+	  background-size: cover;
+	 }
+	 100% {
+	 background: url("../img/background.png");
+	 background-position: center; 
+	 background-size: cover;
+	 }
+	 }
+
+	 @keyframes spiral {
+	 0% { 
+	 
+	 }
+	 100% {
+	 transform: translate(3000px, 0px) rotate(2000deg);
+	 }
+	 }
+
+
+	footer:hover, footer p:hover{
+	 font-family: "Bigelow Rules", serif;
+	 color: #3E1627;
+	}
+
+.spiral {
+  --b: 15px;  /* border thickness */
+  --s: 300px; /* preferred size shape */
+  --c: #BCF8EC;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+	position: fixed;
+  top: 250px;
+  left: -500px;
+
+  animation: spiral 5s;
+	animation-delay: 6s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;	
+}
+
+.spiral {
+  --b: 15px;  /* border thickness */
+  --s: 300px; /* preferred size shape */
+  --c: #BCF8EC;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+	position: fixed;
+  top: 200px;
+  left: -500px;
+
+   animation: spiral 7s;
+	animation-delay: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.spiral1 {
+  --b: 10px;  /* border thickness */
+  --s: 200px; /* preferred size shape */
+  --c: #AED9E0;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+	position: fixed;
+  top: 300px;
+  left: -500px;
+
+   animation: spiral 2s;
+	animation-delay: 9s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.spiral2 {
+  --b: 25px;  /* border thickness */
+  --s: 400px; /* preferred size shape */
+  --c: #9FA0C3;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+
+  position: fixed;
+  top: 300px;
+  left: -500px;
+
+   animation: spiral 4s;
+	animation-delay: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.spiral3 {
+  --b: 10px;  /* border thickness */
+  --s: 250px; /* preferred size shape */
+  --c: #8B687F;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+position: fixed;
+  top: 500px;
+  left: -500px;
+
+
+   animation: spiral 2s;
+	animation-delay: 7s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+}
+
+.spiral4 {
+  --b: 15px;  /* border thickness */
+  --s: 300px; /* preferred size shape */
+  --c: #7B435B;
+
+  width: round(var(--s),4*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,var(--c) 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,#0000 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+
+position: fixed;
+  top: 400px;
+  left: -500px;
+
+
+   animation: spiral 4s;
+	animation-delay: 8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+	/**/
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for portrait tablets and large phone screens.  */
+@media all and (min-width: 600px) {
+	
+	
+	
+	
+} /* closes 600px+ */
+
+
+
+/* Minimum width for landscape laptops. */
+@media all and (min-width: 768px) {
+	
+	
+	
+	
+} /* closes 768px+ */
+
+
+
+/* Minimum width for larger tablets, laptops and desktops. */
+@media all and (min-width: 992px) {
+	
+	
+	
+	
+} /* closes 992px+ */
+
+
+
+/* Minimum width for larger desktops. */
+@media all and (min-width: 1200px) {
+	
+	
+	
+	
+} /* closes 1200px+ */
+
+
+
