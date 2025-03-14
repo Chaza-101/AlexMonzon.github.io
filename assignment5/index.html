@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Assingment 5</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+</head>
+
+
+<body>
+
+  <div id="container">
+
+  <header>
+  <h1>Fruitger Aesthetics: Core Elements</h1>
+  <h2 class="hides">Examples</h2>
+  </header>
+
+  <main>
+
+  <p>Several factors are involved in what the Frutiger family of aesthetics uses as a basis for design, and oftentimes, they seem connected to basic photo editing skills. Still, they are used to make a glossy, realistic photoshopped look.</p>
+	<figure>
+  <img src="img/attempt1.png"></img>
+  <figcaption><p>my first attempt at some of the aesthetic</p></figcaption>
+	</figure>
+
+  <p>This page will start like a more modern look site, and slowly change into a site with the Frutiger styles added onto it as you click on the buttons</p>
+  <p>I am not particularly happy with how the visuals for this assingment turned out, but I think it was a good benchmark to make sure the final project is better. For the final the buttons will be pngs, and the backgrounds will be done even more referenced.</p>
+
+
+  <button class="skew"><h2>Skeuomorphised UI/UX</h2></button>
+  <p class="hides">Because these interfaces were made at a time when the internet was still being learned, a lot of interactive elements looked and sounded like buttons. One of the best examples of this is the Wii, where the game icons are not only spaced out, but when you hover on them they would expand and make a noise, indicating that it is clickable. Another example is old touchscreen keyboards on phones, where the keys looked like sleeker keycaps.</p>
+  <p class="hides">Things looked more like their intended purpose, and with the rise of technology usage, the need to have as much skeuomorphism in ux declined. I however still think it's really nice to interact with because it gives a clear guide on how people are supposed to use software without needing previous internet experience.</p>
+  <p class="hides">I tried to use the built in gradient options to make the effect that the old tech buttons have. I think I am on the right bath but also need to figure out a better solution. The dropshadow has the wanted effect though.</p>
+
+  <button class="gloss"><h2>Glossy Design</h2></button>
+  <p class="hideg">All of the Fruitiger aesthetics have this sleek "perfection" to them, where the designs look like they are shiny or made of glass (with the exception of Floral Metro and Four Colors aesthetic, which have at most flat 2D shines to them). All of the images are also extremely crisp unless purposefully diffused. While I think this was so they showed up correctly on lower-resolution screens at the time, it gives it a creative touch now.</p>
+  <p class="hideg">From looking at reference images, A lot of the shine to them seems to be easily replicable in Photoshop with either lasso tools and Gaussian blur to create the shine, or a gradient from the center out, depending on the angle of the glossy item is at. If it is a button, the general rule is that the shine goes toward the top of the button, and the bottom underneath it there is a drop shadow on the buttons.</p>
+  <p class="hideg">This pages aethetic comes from the Frutiger Aurora aethetic. The images involved were my first attempts at this style and I think I understand where it goes wrong in my attempts, bit I will need to keep looking at reference images when trying stuff out.</p>
+
+
+  <button class="font"><h2>Frutiger/Humanist Sans-Serif Typefaces</h2></button>
+  <p class="hidef">Before starting this research, I assumed there was no directly linked font that went with this aesthetic. Come to my surprise to find out it is named after Adrian Frutiger, a well-known typeface designer. The humanist sans-serif designs he created and this aesthetic follows have stronger curves than regular sans-serif, seem more handwritten, and are known for their strong legibility, even from afar.</p>
+  <p class="hidef">Along with that, there are fonts that repeatedly show up in designs like Droid Sans, Calibri, Fruitiger, Myriad, and Segoe. The header fonts seem to follow the same rules of design, however, they sometimes get the same gloss treatment as other icons and lean towards the technological side of the aesthetic more.</p>
+  </main>
+
+  
+  
+  </div><!-- close "container" -->
+  
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+$(document).ready(function() {
+$('.hides').hide();
+$('.hideg').hide();
+$('.hidef').hide();
+$('.hidef').hide();
+$('.skew').click(function() {
+
+	$('.hides').slideDown(1500, function() {
+			$('button').css({
+				"background" : "rgb(207,255,253)",
+				"background" : "radial-gradient(ellipse, rgba(207,255,253,1) 35%, rgba(133,229,226,1) 35%, rgba(19,214,218,1) 88%, rgba(0,158,162,1) 88%)", 
+				"border" : "none",
+				"box-shadow" : "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
+			});
+
+			
+	});//close callback function
+});//close skew function
+
+$('.gloss').click(function() {
+
+	$('.hideg').slideDown(1500, function(){
+			$('main').css({"background" : "#a1d7d5", "padding-left" : "2%", "padding-right" : "2%", "padding-top" : "8px"});
+			$('body').toggleClass('forest');
+			$('header').css({"background" : "#a1d7d5"});
+			$('h1').css({"color" : "#1E1E24"});
+			$('h2').css({"color" : "#1E1E24"});
+	});//close callback function
+});//close skew function
+
+$('.font').click(function() {
+
+	$('.hidef').slideDown(1500, function() {
+			$('h1').css({"font-family" : "calibri"});
+			$('p').css({"font-family" : "droid"});
+			$('h2').css({"font-family" : "frutiger"});
+	});//close callback function
+});//close skew function
+
+
+}); //close .ready()
+</script>
+
+
+
+</body>
+	
+</html> 
