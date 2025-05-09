@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>***</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+</head>
+
+
+<body class="aero">
+
+  <div id="container">
+  <nav>
+	<li><a href="index.html"><button>Home</button></a></li>
+  <div id="desktop">
+	<li><a href="key.html"><button>Key Aesthetics</button></a></li>
+	<li><a href="Rule.html"><button>Rules of Style</button></a></li>
+	<li><a href="modern.html"><button>Modernize</button></a></li>
+  </div>
+  </nav>
+
+
+  <header>
+	<h1>Key Aesthetics.</h1>
+  <header>
+
+  <div id="aero">
+  <header>
+	<h2>Frutiger Aero/Aurora</h2>
+  <header>
+
+  <main> 
+	<p>Aero is the most well known of the styles. 
+	It has very interesting idyllic, photoshopped, glossy elements as its main art, and the key elements are a combination of nature and technology, with blue and green as its main two colors. 
+	One of its most well know implementations is one of the Windows 95 backgrounds. 
+	Because of its connection to the Windows products, their old style of UX/UI was deeply rooted in skewmorphism, and it gave computers a lot of the skewmorphic detailing it still has now.</p>
+  
+	<p>Aurora also has a long history of backgrounds, even till now. 
+	The main focus of this style is looking similar to Aurora Borealis. 
+	However as research has continued I'm realizing its more of just the concept of an aurora, with it just being sort of just fun gradient lines and shapes. 
+	I think this idea has stuck around even into now, with a lot of the default backgrounds being just gradient lines and shapes.</p>
+
+	<p>I think in the modern day a lot of these ideas have stuck, but have evolved and toned down. 
+	An interesting direction to go in would be bringing back the more skeomorphic details that have been slowly flattened down, and having the background elements as more of a 3d background experience seems very interesting to me. 
+	I also saw a way to be able to click and move things around the screen using jquery, and I feel like that also fits into bringing this aesthetic back into things.</p>
+	<button> Metro </button>
+  </main>
+  </div>
+
+  <header>
+
+<div id="metro">
+	<h2>Frutiger Metro</h2>
+  <header>
+  <main>
+	<p>Frutiger Metro (also known as flat Frutiger Aero) uses the Metro design method created by Microsoft, that they still use today. 
+	It keeps a lot of the same key elements of nature and natural movements with a gloss, but in a different way. 
+	It does a lot of vine and flower elements instead, and chooses to steer away from the false realism of other Frutiger aesthetics. 
+	It also has a lot of musical elements involved, with speakers and circle sound balls, and even depicts people often. 
+	It is usually very restrained in its color choices, but that is really depending on the type of sub-sub-genre it is. 
+	It also has a lot of graffiti elements involved, with the spray texture and bold shapes being clear inspirations.</p>
+  
+	<p>The reason I find this important to include in the research is because as of the last few years, Y2k aesthetics have been returning into fashion and music, and I feel like there is a lot of overlap between some of the features in this aesthetic and current returning trends. 
+	I am still unsure as to how it will be implemented into the website, but maybe a tab for music related things with this aesthetic, because it feels wrong to talk about how to bring Frutiger back without mentioning it.</p>
+  </main>
+  <button> Aero </button>
+</div>
+
+
+  </div><!-- close "container" -->
+  
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+$(document).ready(function() {
+$('#metro').hide();
+$("body").addClass("aero");
+$("button").click(function(){
+	$('#metro').fadeToggle();  
+	$('#aero').fadeToggle();
+	$("body").toggleClass("aero");
+    $("body").toggleClass("metro");
+}); 
+
+
+}); //close .ready()
+</script>
+
+
+</body>
+	
+</html> 
